@@ -1,23 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Welcome!</h1>
+    <!-- Main Background -->
+    <main class="profile-page">
 
-    <button onclick="sayHello()">Click Me</button>
+        <div class="profile-container">
 
-    <p id="message"></p>
+            <!-- Top Image -->
+            <section class="hero-image">
+                <img src="images/top-image.jpg" alt="Profile banner">
+            </section>
 
-    <script>
-        function sayHello() {
-            document.getElementById("message").textContent =
-                "Hello! The button works!";
-        }
-    </script>
+
+            <!-- Biography -->
+            <section class="biography-card">
+
+                <!-- Profile Picture -->
+                <div class="profile-picture">
+                    <img src="images/profile-picture.jpg" alt="Profile picture">
+                </div>
+
+                <div class="biography-content">
+
+                    <h1>Auto Biography</h1>
+
+                    <p>
+                        Biography text will go here.
+                        This is currently just a placeholder.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Three Navigation Buttons -->
+            <section class="profile-buttons">
+
+                <!-- Contact Info -->
+                <a href="#" class="profile-button">
+
+                    <div class="button-image">
+                        <img src="images/contact.jpg" alt="Contact information">
+                    </div>
+
+                    <h2>Contact Info</h2>
+
+                </a>
+
+
+                <!-- Traits -->
+                <a href="#" class="profile-button">
+
+                    <div class="button-image">
+                        <img src="images/traits.jpg" alt="Traits">
+                    </div>
+
+                    <h2>Traits</h2>
+
+                </a>
+
+
+                <!-- Additional -->
+                <a href="#" class="profile-button">
+
+                    <div class="button-image">
+                        <img src="images/additional.jpg" alt="Additional information">
+                    </div>
+
+                    <h2>Additional</h2>
+
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
 
 </body>
 </html>
