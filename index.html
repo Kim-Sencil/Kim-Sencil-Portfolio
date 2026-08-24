@@ -4,39 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Profile</title>
+    <title>Kim Driggs B. Sencil</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Main Background -->
     <main class="profile-page">
 
         <div class="profile-container">
 
-            <!-- Top Image -->
+            <!-- =====================================
+                 TOP IMAGE
+            ====================================== -->
+
             <section class="hero-image">
-                <img src="images/top-image.jpg" alt="Profile banner">
+                <img
+                    src="images/top-image.jpg"
+                    alt="Profile banner"
+                >
             </section>
 
 
-            <!-- Biography -->
+            <!-- =====================================
+                 BIOGRAPHY
+            ====================================== -->
+
             <section class="biography-card">
 
-                <!-- Profile Picture -->
-                <div class="profile-picture">
-                    <img src="images/profile-picture.jpg" alt="Profile picture">
-                </div>
+                <!-- Clickable Profile Picture -->
+                <button
+                    class="profile-picture"
+                    id="profilePictureButton"
+                    aria-label="Enlarge profile picture"
+                >
+                    <img
+                        src="images/profile.jpg"
+                        alt="Kim Driggs B. Sencil"
+                    >
+                </button>
 
                 <div class="biography-content">
 
-                    <h1>Auto Biography</h1>
+                    <h1>Kim Driggs B. Sencil</h1>
+
+                    <div class="red-divider"></div>
 
                     <p>
-                        Biography text will go here.
-                        This is currently just a placeholder.
+                        I am Kim Driggs B. Sencil. I am currently 17 years
+                        of age and reside in Luinab, Iligan City. As of this
+                        year I am enrolled in Iligan City National High School
+                        in 12th grade Senior High School.
                     </p>
 
                 </div>
@@ -44,49 +63,131 @@
             </section>
 
 
-            <!-- Three Navigation Buttons -->
+            <!-- =====================================
+                 INFORMATION BUTTONS
+            ====================================== -->
+
             <section class="profile-buttons">
 
-                <!-- Contact Info -->
-                <a href="#" class="profile-button">
+                <!-- CONTACT INFO -->
+                <button
+                    class="profile-button contact-button"
+                    data-section="contact"
+                    aria-expanded="false"
+                >
+                    <div class="button-pattern">
 
-                    <div class="button-image">
-                        <img src="images/contact.jpg" alt="Contact information">
+                        <div class="button-symbol">
+                            ☎
+                        </div>
+
+                        <span>Contact Info:</span>
+
+                        <div class="expand-arrow">
+                            ↓
+                        </div>
+
                     </div>
-
-                    <h2>Contact Info</h2>
-
-                </a>
+                </button>
 
 
-                <!-- Traits -->
-                <a href="#" class="profile-button">
+                <!-- SKILLS AND WEAKNESSES -->
+                <button
+                    class="profile-button skills-button"
+                    data-section="skills"
+                    aria-expanded="false"
+                >
+                    <div class="button-pattern">
 
-                    <div class="button-image">
-                        <img src="images/traits.jpg" alt="Traits">
+                        <div class="button-symbol">
+                            ✦
+                        </div>
+
+                        <span>Skills and Weaknesses</span>
+
+                        <div class="expand-arrow">
+                            ↓
+                        </div>
+
                     </div>
-
-                    <h2>Traits</h2>
-
-                </a>
+                </button>
 
 
-                <!-- Additional -->
-                <a href="#" class="profile-button">
+                <!-- ADDITIONAL INFO -->
+                <button
+                    class="profile-button additional-button"
+                    data-section="additional"
+                    aria-expanded="false"
+                >
+                    <div class="button-pattern">
 
-                    <div class="button-image">
-                        <img src="images/additional.jpg" alt="Additional information">
+                        <div class="button-symbol">
+                            ☆
+                        </div>
+
+                        <span>Additional Info</span>
+
+                        <div class="expand-arrow">
+                            ↓
+                        </div>
+
                     </div>
+                </button>
 
-                    <h2>Additional</h2>
+            </section>
 
-                </a>
+
+            <!-- =====================================
+                 EXPANDING INFORMATION PANEL
+            ====================================== -->
+
+            <section
+                class="details-panel"
+                id="detailsPanel"
+                aria-hidden="true"
+            >
+
+                <div class="details-content" id="detailsContent">
+
+                    <!-- JavaScript inserts content here -->
+
+                </div>
 
             </section>
 
         </div>
 
     </main>
+
+
+    <!-- =========================================
+         PROFILE PICTURE OVERLAY
+    ========================================== -->
+
+    <div
+        class="pfp-overlay"
+        id="pfpOverlay"
+        aria-hidden="true"
+    >
+
+        <button
+            class="overlay-close"
+            id="overlayClose"
+            aria-label="Close enlarged profile picture"
+        >
+            ×
+        </button>
+
+        <img
+            src="images/profile.jpg"
+            alt="Enlarged profile picture"
+            class="enlarged-profile-picture"
+        >
+
+    </div>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
