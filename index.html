@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kim Driggs B. Sencil</title>
+
+    <!-- =========================================
+         LINK PREVIEW / SOCIAL MEDIA
+    ========================================== -->
+
+    <meta property="og:title" content="Kim Sencil | Portfolio">
+
+    <meta
+        property="og:description"
+        content="Personal portfolio of Kim Driggs B. Sencil."
+    >
+
+    <meta
+        property="og:image"
+        content="images/top-image.jpg"
+    >
+
+    <meta property="og:type" content="website">
+
+
+    <!-- Twitter / X -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="Kim Sencil | Portfolio"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Personal portfolio of Kim Driggs B. Sencil."
+    >
+
+    <meta
+        name="twitter:image"
+        content="images/top-image.jpg"
+    >
+
+
+    <!-- Website title -->
+
+    <title>Kim Sencil | Portfolio</title>
+
+
+    <!-- Main stylesheet -->
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
@@ -16,15 +66,19 @@
         <div class="profile-container">
 
             <!-- TOP IMAGE -->
+
             <section class="hero-image">
+
                 <img
                     src="images/top-image.jpg"
                     alt="Profile banner"
                 >
+
             </section>
 
 
             <!-- BIOGRAPHY -->
+
             <section class="biography-card">
 
                 <button
@@ -32,11 +86,14 @@
                     id="profilePictureButton"
                     aria-label="Enlarge profile picture"
                 >
+
                     <img
                         src="images/profile.jpg"
                         alt="Kim Driggs B. Sencil"
                     >
+
                 </button>
+
 
                 <div class="biography-content">
 
@@ -57,6 +114,7 @@
 
 
             <!-- THREE INFORMATION CARDS -->
+
             <section class="profile-buttons">
 
                 <button
@@ -64,11 +122,21 @@
                     data-section="contact"
                     aria-expanded="false"
                 >
+
                     <div class="button-pattern">
-                        <span>Contact Info:</span>
+
+                        <span>
+                            Contact Info:
+                        </span>
+
                         <div class="button-line"></div>
-                        <small>Get in touch</small>
+
+                        <small>
+                            Get in touch
+                        </small>
+
                     </div>
+
                 </button>
 
 
@@ -77,11 +145,22 @@
                     data-section="skills"
                     aria-expanded="false"
                 >
+
                     <div class="button-pattern">
-                        <span>Skills and<br>Weaknesses</span>
+
+                        <span>
+                            Skills and<br>
+                            Weaknesses
+                        </span>
+
                         <div class="button-line"></div>
-                        <small>Strengths & limitations</small>
+
+                        <small>
+                            Strengths & limitations
+                        </small>
+
                     </div>
+
                 </button>
 
 
@@ -90,26 +169,40 @@
                     data-section="additional"
                     aria-expanded="false"
                 >
+
                     <div class="button-pattern">
-                        <span>Additional<br>Info</span>
+
+                        <span>
+                            Additional<br>
+                            Info
+                        </span>
+
                         <div class="button-line"></div>
-                        <small>More about me</small>
+
+                        <small>
+                            More about me
+                        </small>
+
                     </div>
+
                 </button>
 
             </section>
 
 
-            <!-- ONE SHARED EXPANDING TAB -->
+            <!-- SINGLE SHARED EXPANDING TAB -->
+
             <section
                 class="details-panel"
                 id="detailsPanel"
                 aria-hidden="true"
             >
+
                 <div
                     class="details-content"
                     id="detailsContent"
                 ></div>
+
             </section>
 
         </div>
@@ -117,7 +210,8 @@
     </main>
 
 
-    <!-- PFP OVERLAY -->
+    <!-- PROFILE PICTURE OVERLAY -->
+
     <div
         class="pfp-overlay"
         id="pfpOverlay"
@@ -132,6 +226,7 @@
             ×
         </button>
 
+
         <img
             src="images/profile.jpg"
             alt="Enlarged profile picture"
@@ -141,7 +236,10 @@
     </div>
 
 
+    <!-- JavaScript -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
