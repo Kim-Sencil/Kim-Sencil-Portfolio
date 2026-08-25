@@ -2,15 +2,20 @@
    INFORMATION BUTTONS
 ========================================= */
 
-const profileButtons = document.querySelectorAll(".profile-button");
-const detailsPanel = document.getElementById("detailsPanel");
-const detailsContent = document.getElementById("detailsContent");
+const profileButtons =
+    document.querySelectorAll(".profile-button");
+
+const detailsPanel =
+    document.getElementById("detailsPanel");
+
+const detailsContent =
+    document.getElementById("detailsContent");
 
 let activeSection = null;
 
 
 /* =========================================
-   CONTENT
+   INFORMATION CONTENT
 ========================================= */
 
 const sectionContent = {
@@ -68,11 +73,11 @@ const sectionContent = {
                     <div class="info-item">
 
                         <span class="info-label">
-                            Social Media
+                            Facebook
                         </span>
 
                         <span class="info-value">
-                            Facebook: Kim Sencil
+                            Kim Sencil
                         </span>
 
                     </div>
@@ -183,20 +188,31 @@ const sectionContent = {
                 <div class="additional-column">
 
                     <div class="favorite-item">
+
                         <strong>Favorite Color</strong>
+
                         <span>Red</span>
+
                     </div>
 
 
                     <div class="favorite-item">
+
                         <strong>Favorite Food</strong>
+
                         <span>Pasta (any kind)</span>
+
                     </div>
 
 
                     <div class="favorite-item">
+
                         <strong>Favorite Song</strong>
-                        <span>Hotel California by Eagles</span>
+
+                        <span>
+                            Hotel California by Eagles
+                        </span>
+
                     </div>
 
                 </div>
@@ -228,7 +244,7 @@ const sectionContent = {
 
 
 /* =========================================
-   BUTTON FUNCTION
+   BUTTON INTERACTION
 ========================================= */
 
 profileButtons.forEach(button => {
@@ -238,15 +254,21 @@ profileButtons.forEach(button => {
         const section = button.dataset.section;
 
 
-        /* Clicking the currently open button closes it */
+        /* Close if clicking the active button */
 
         if (activeSection === section) {
 
             detailsPanel.classList.remove("open");
 
-            detailsPanel.setAttribute("aria-hidden", "true");
+            detailsPanel.setAttribute(
+                "aria-hidden",
+                "true"
+            );
 
-            button.setAttribute("aria-expanded", "false");
+            button.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
             activeSection = null;
 
@@ -266,7 +288,7 @@ profileButtons.forEach(button => {
         });
 
 
-        /* Activate current button */
+        /* Activate selected button */
 
         button.setAttribute(
             "aria-expanded",
@@ -274,7 +296,7 @@ profileButtons.forEach(button => {
         );
 
 
-        /* Insert appropriate content */
+        /* Replace the SINGLE lower panel */
 
         detailsContent.innerHTML =
             sectionContent[section];
@@ -292,8 +314,8 @@ profileButtons.forEach(button => {
 
 
         /*
-           If another section was already open,
-           scroll slightly toward the new panel.
+           Smoothly move the lower panel
+           into view.
         */
 
         setTimeout(() => {
@@ -315,7 +337,9 @@ profileButtons.forEach(button => {
 ========================================= */
 
 const profilePictureButton =
-    document.getElementById("profilePictureButton");
+    document.getElementById(
+        "profilePictureButton"
+    );
 
 const pfpOverlay =
     document.getElementById("pfpOverlay");
@@ -324,23 +348,26 @@ const overlayClose =
     document.getElementById("overlayClose");
 
 
-/* Open */
+/* Open overlay */
 
-profilePictureButton.addEventListener("click", () => {
+profilePictureButton.addEventListener(
+    "click",
+    () => {
 
-    pfpOverlay.classList.add("open");
+        pfpOverlay.classList.add("open");
 
-    pfpOverlay.setAttribute(
-        "aria-hidden",
-        "false"
-    );
+        pfpOverlay.setAttribute(
+            "aria-hidden",
+            "false"
+        );
 
-    document.body.style.overflow = "hidden";
+        document.body.style.overflow =
+            "hidden";
+    }
+);
 
-});
 
-
-/* Close */
+/* Close overlay */
 
 function closePfpOverlay() {
 
@@ -352,7 +379,6 @@ function closePfpOverlay() {
     );
 
     document.body.style.overflow = "";
-
 }
 
 
@@ -364,30 +390,36 @@ overlayClose.addEventListener(
 );
 
 
-/* Click outside the picture */
+/* Click outside enlarged PFP */
 
-pfpOverlay.addEventListener("click", event => {
+pfpOverlay.addEventListener(
+    "click",
+    event => {
 
-    if (event.target === pfpOverlay) {
+        if (event.target === pfpOverlay) {
 
-        closePfpOverlay();
+            closePfpOverlay();
+
+        }
 
     }
-
-});
+);
 
 
 /* Escape key */
 
-document.addEventListener("keydown", event => {
+document.addEventListener(
+    "keydown",
+    event => {
 
-    if (
-        event.key === "Escape" &&
-        pfpOverlay.classList.contains("open")
-    ) {
+        if (
+            event.key === "Escape" &&
+            pfpOverlay.classList.contains("open")
+        ) {
 
-        closePfpOverlay();
+            closePfpOverlay();
+
+        }
 
     }
-
-});
+);
